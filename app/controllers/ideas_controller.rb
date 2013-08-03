@@ -65,6 +65,7 @@ class IdeasController < ApplicationController
   def like
     respond_to do |format|
       @idea.increment(:like)
+      @idea.save!
       format.html { redirect_to @idea }
     end
   end
