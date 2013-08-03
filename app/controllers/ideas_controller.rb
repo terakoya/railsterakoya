@@ -63,8 +63,7 @@ class IdeasController < ApplicationController
 
   # PATCH/PUT /ideas/1/like
   def like
-    @idea.increment(:like)
-    @idea.save!
+    @idea.increment!(:like)
     respond_to do |format|
       format.html { redirect_to @idea }
     end
