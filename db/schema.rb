@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20130803045617) do
     t.string   "picture"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "like"
+    t.integer  "like",        default: 0
   end
 
 end
