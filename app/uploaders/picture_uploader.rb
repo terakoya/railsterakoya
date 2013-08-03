@@ -48,4 +48,9 @@ class PictureUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
 
+
+  include CarrierWave::RMagick
+
+  process :resize_to_fit => [600, 600]
+
 end
