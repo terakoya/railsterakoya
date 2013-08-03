@@ -1,5 +1,5 @@
 class IdeasController < ApplicationController
-  before_action :set_idea, only: [:show, :edit, :update, :destroy]
+  before_action :set_idea, only: [:show, :edit, :update, :destroy, :like]
 
   # GET /ideas
   # GET /ideas.json
@@ -58,6 +58,14 @@ class IdeasController < ApplicationController
     respond_to do |format|
       format.html { redirect_to ideas_url }
       format.json { head :no_content }
+    end
+  end
+
+  # PATCH/PUT /ideas/1/like
+  def like
+    respond_to do |format|
+      @idea.increment(:like)
+      format.html { redirect_to @idea }
     end
   end
 
