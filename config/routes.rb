@@ -2,7 +2,9 @@ Railsterakoya::Application.routes.draw do
   root to: redirect('/ideas')
 
   resources :ideas do
-    put :like, on: :member
+    member do
+      put :like
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
