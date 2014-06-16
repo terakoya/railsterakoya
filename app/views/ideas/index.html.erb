@@ -1,11 +1,10 @@
-<h1>Listing ideas</h1>
-
+<h1><%= raw ":watermelon:".emojify %>アイディア集<%= raw ":watermelon:".emojify %></h1>
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Picture</th>
+      <th><%= raw ":shaved_ice:".emojify %>アイディア名<%= raw ":shaved_ice:".emojify %></th>
+      <th><%= raw ":swimmer:".emojify %>説明<%= raw ":swimmer:".emojify %></th>
+      <th><%= raw ":corn:".emojify %>画像<%= raw ":corn:".emojify %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,9 +17,9 @@
         <td><%= idea.name %></td>
         <td><%= idea.description %></td>
         <td><%= link_to image_tag(idea.picture, size: "100x150" ), idea %></td>
-        <td><%= link_to 'Show', idea %></td>
-        <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
-        <td><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to "#{raw(':fireworks:'.emojify)}詳細 #{raw(':fireworks:'.emojify)}".html_safe, idea %></td>
+        <td><%= link_to "#{raw(':bikini:'.emojify)}編集 #{raw(':bikini:'.emojify)}".html_safe, idea %></td>
+        <td><%= link_to "#{raw(':sunflower:'.emojify)}編集 #{raw(':sunflower:'.emojify)}".html_safe, idea %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +27,5 @@
 
 <br>
 
-<%= link_to 'New Idea', new_idea_path %>
+<%= link_to "#{raw(':sushi:'.emojify)}新しいアイディア #{raw(':sushi:'.emojify)}".html_safe, new_idea_path %></td>
+
